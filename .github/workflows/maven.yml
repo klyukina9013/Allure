@@ -19,7 +19,7 @@ jobs:
         id: allure-report
         with:
           allure_results: target/allure-results
-          gh_pages: gh_pages
+          gh_pages: gh-pages
           allure_report: target/allure-report
           allure_history: target/allure-history
 
