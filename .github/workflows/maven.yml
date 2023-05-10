@@ -1,6 +1,7 @@
-name: Run ReqRes test
+name: Run Booking test
 
-on: push
+on:
+  push
 
 jobs:
   run_tests:
@@ -13,7 +14,8 @@ jobs:
       - name: "Запуск тестов"
         run: mvn clean test
         continue-on-error: true
-      - name: simple-elf/allure-report-action@master
+      - name: "Генерация allure-report"
+        uses: simple-elf/allure-report-action@master
         id: allure-report
         with:
           allure_results: target/allure-results
