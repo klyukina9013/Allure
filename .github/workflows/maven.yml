@@ -10,7 +10,7 @@ jobs:
     steps:
 
       - name: "Скачивание selenoid"
-        uses: curl -s https://aerokube.com/cm/bash | bash
+        run: curl -s https://aerokube.com/cm/bash | bash
       - name: "Расширение прав на запуск selenoid"
         run: chmod +x ./cm
       - name: "Запуск selenoid"
